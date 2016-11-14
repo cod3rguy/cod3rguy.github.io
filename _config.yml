@@ -3,7 +3,6 @@ exclude:
     - README.md
     - bs-config.js
     - less
-    - components
 timezone: America/Chicago
 environment: production
 excerpt_separator: "<read-more>"

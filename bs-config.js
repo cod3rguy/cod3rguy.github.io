@@ -12,7 +12,7 @@
  |
  */
 module.exports = {
-	files: ['_site/*'],
+	files: ['_site/index.html'],
 	proxy: 'localhost:4000',
 	port: 1337,
 	open: false
