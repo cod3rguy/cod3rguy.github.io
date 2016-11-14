@@ -1,0 +1,22 @@
+title: CoderGuy
+exclude: 
+    - README.md
+    - bs-config.js
+    - less
+    - components
+timezone: America/Chicago
+environment: production
+excerpt_separator: "<read-more>"
+defaults:
+    -
+        scope:
+            path: ""
+            type: "posts"
+        values:
+            layout: "posts.html"
+    -
+        scope:
+            path: ""
+            type: "pages"
+        values:
+            layout: "default.html"
