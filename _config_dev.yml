@@ -1,3 +1,1 @@
 environment: development
-exclude:
-    - components

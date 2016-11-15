@@ -1,2 +1,66 @@
+//Less Imports
 @import "../components/bootstrap/less/bootstrap";
 
+//Global Variables
+@baseFont: "Monaco", monospace;
+@baseFontSize: 16px;
+@bgColor: #212121;
+@txtColor: #eeeeee;
+@firstColor: #ffd884;
+@secondColor: #82abff;
+@thirdColor: #82ffb6;
+@fourthColor: #666666;
+@fifthColor: #fcb5de;
+
+//Global Styling
+html, body, p, h1, h2, pre {
+    font-family: @baseFont;
+    background-color: @bgColor;
+    color: @txtColor;
+}
+
+//Mixins
+.bigTxt(@times) {
+    font-size: @baseFontSize * @times;
+}
+
+.intro {
+    pre {
+        margin-top: 20px;
+        background: transparent;
+        border: 0;
+        .bigTxt(1.2);
+        .logo {
+            .bigTxt(2);
+            color: @thirdColor;
+        }
+        .key {
+            color: @secondColor;
+        }
+        .val {
+            color: @firstColor;
+        }
+        .muted {
+            color: @fourthColor;
+        }
+        a {
+            text-decoration: underline;
+            color: @fifthColor;
+            &:hover {
+                color: darken(@fifthColor,10%);
+            }
+        }
+        @media (max-width: 480px) {
+            .bigTxt(1);
+            .logo {
+                .bigTxt(1.5);
+            }
+        }
+        @media (max-width: 360px) {
+            .bigTxt(0.75);
+            .logo {
+                .bigTxt(1.2);
+            }
+        }
+    }
+}

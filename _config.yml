@@ -3,6 +3,8 @@ exclude:
     - README.md
     - bs-config.js
     - less
+    - components
+    - bower.json
 timezone: America/Chicago
 environment: production
 excerpt_separator: "<read-more>"
@@ -18,4 +20,4 @@ defaults:
             path: ""
             type: "pages"
         values:
-            layout: "default.html"
+            layout: "pages.html"
