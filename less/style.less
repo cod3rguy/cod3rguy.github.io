@@ -19,11 +19,16 @@ html, body, p, h1, h2, pre {
     color: @txtColor;
 }
 
+.muted {
+   color: @fourthColor;
+}
+
 //Mixins
 .bigTxt(@times) {
     font-size: @baseFontSize * @times;
 }
 
+//Local Styling
 .intro {
     pre {
         margin-top: 20px;
@@ -40,9 +45,6 @@ html, body, p, h1, h2, pre {
         .val {
             color: @firstColor;
         }
-        .muted {
-            color: @fourthColor;
-        }
         a {
             text-decoration: underline;
             color: @fifthColor;
@@ -50,16 +52,49 @@ html, body, p, h1, h2, pre {
                 color: darken(@fifthColor,10%);
             }
         }
-        @media (max-width: 480px) {
-            .bigTxt(1);
-            .logo {
-                .bigTxt(1.5);
-            }
+    }
+}
+
+.pageContainer {
+    min-height: 2000px;
+    padding: 100px 0;
+}
+
+.headbar {
+    position: fixed;
+    width: 100%;
+    padding: 10px 0;
+    background-color: fadeout(darken(@bgColor,5%),10%);
+    border-bottom: 1px solid @thirdColor;
+    .logo {
+        .bigTxt(2);
+        color: @thirdColor;
+        border-bottom: 1.5px solid @thirdColor;
+        &:hover {
+            color: darken(@thirdColor,10%);
+            border-bottom: 1.5px solid darken(@thirdColor,10%);
+            text-decoration: none;
         }
-        @media (max-width: 360px) {
-            .bigTxt(0.75);
-            .logo {
-                .bigTxt(1.2);
+    }
+    .symbols {
+        .bigTxt(1.2);
+    }
+    .pageNav {
+        .bigTxt(1.2);
+        color: @secondColor;
+    }
+    .navItem {
+        &:extend(.intro pre a);
+        &:hover {
+            &:extend(.intro pre a:hover);
+        }
+        .bigTxt(1);
+        &.active {
+            text-decoration: none;
+            color: @firstColor;
+            .bigTxt(1.1);
+            &:hover {
+                color: darken(@firstColor,10%); 
             }
         }
     }
