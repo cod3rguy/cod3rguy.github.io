@@ -14,10 +14,10 @@ defaults:
             path: ""
             type: "posts"
         values:
-            layout: "posts.html"
+            layout: "posts"
     -
         scope:
             path: ""
             type: "pages"
         values:
-            layout: "pages.html"
+            layout: "pages"

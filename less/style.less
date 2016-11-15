@@ -3,7 +3,7 @@
 
 //Global Variables
 @baseFont: "Monaco", monospace;
-@baseFontSize: 16px;
+@font-size-base: 16px;
 @bgColor: #212121;
 @txtColor: #eeeeee;
 @firstColor: #ffd884;
@@ -12,6 +12,11 @@
 @fourthColor: #666666;
 @fifthColor: #fcb5de;
 
+//Mixins
+.txtSize(@times) {
+    font-size: @font-size-base * @times;
+}
+
 //Global Styling
 html, body, p, h1, h2, pre {
     font-family: @baseFont;
@@ -19,24 +24,33 @@ html, body, p, h1, h2, pre {
     color: @txtColor;
 }
 
+.pageHeading {
+    .txtSize(2);
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid @fourthColor;
+    @media (max-width: 360px) {
+        .txtSize(1.5);
+    }
+}
+
 .muted {
    color: @fourthColor;
 }
 
-//Mixins
-.bigTxt(@times) {
-    font-size: @baseFontSize * @times;
-}
-
 //Local Styling
+//Styling for Individual pages and layouts
+
+//Page: Home
+
 .intro {
     pre {
         margin-top: 20px;
         background: transparent;
         border: 0;
-        .bigTxt(1.2);
+        .txtSize(1.2);
         .logo {
-            .bigTxt(2);
+            .txtSize(2);
             color: @thirdColor;
         }
         .key {
@@ -55,9 +69,10 @@ html, body, p, h1, h2, pre {
     }
 }
 
+//Layout: Page
+
 .pageContainer {
-    min-height: 2000px;
-    padding: 100px 0;
+    padding: 120px 20px;
 }
 
 .headbar {
@@ -67,7 +82,7 @@ html, body, p, h1, h2, pre {
     background-color: fadeout(darken(@bgColor,5%),10%);
     border-bottom: 1px solid @thirdColor;
     .logo {
-        .bigTxt(2);
+        .txtSize(2.5);
         color: @thirdColor;
         border-bottom: 1.5px solid @thirdColor;
         &:hover {
@@ -75,12 +90,15 @@ html, body, p, h1, h2, pre {
             border-bottom: 1.5px solid darken(@thirdColor,10%);
             text-decoration: none;
         }
+        @media (max-width: 360px) {
+            .txtSize(2);
+        }
     }
     .symbols {
-        .bigTxt(1.2);
+        .txtSize(1.2);
     }
     .pageNav {
-        .bigTxt(1.2);
+        .txtSize(1.2);
         color: @secondColor;
     }
     .navItem {
@@ -88,14 +106,38 @@ html, body, p, h1, h2, pre {
         &:hover {
             &:extend(.intro pre a:hover);
         }
-        .bigTxt(1);
+        .txtSize(1);
         &.active {
             text-decoration: none;
             color: @firstColor;
-            .bigTxt(1.1);
+            .txtSize(1.1);
             &:hover {
                 color: darken(@firstColor,10%); 
             }
         }
+    }
+}
+
+//Page: Posts
+
+.postsList {
+    .postTitle {
+    .txtSize(1.5);
+    margin-bottom: 0;
+    color: @firstColor;
+        @media (max-width: 360px) {
+            .txtSize(1.2);
+        }
+    }
+
+    .postDate {
+        .txtSize(0.75);
+        color: @fourthColor;
+        margin-bottom: 5px;
+    }
+
+    .postExcerpt {
+        margin-bottom: 30px;
+        .txtSize(0.9);
     }
 }
