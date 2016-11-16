@@ -78,7 +78,7 @@ html, body, p, h1, h2, pre {
 .headbar {
     position: fixed;
     width: 100%;
-    padding: 10px 0;
+    padding: 5px 0 15px 0;
     background-color: fadeout(darken(@bgColor,5%),10%);
     border-bottom: 1px solid @thirdColor;
     .logo {
@@ -139,5 +139,20 @@ html, body, p, h1, h2, pre {
     .postExcerpt {
         margin-bottom: 30px;
         .txtSize(0.9);
+    }
+}
+
+//Layout: Posts
+
+.post {
+    .postHead {
+        .postTitle {
+            &:extend(.postsList .postTitle);
+        }
+        .postDate {
+            .txtSize(0.9);
+            color: @fourthColor;
+            margin-bottom: 25px;
+        }
     }
 }

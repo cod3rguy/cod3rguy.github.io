@@ -2,13 +2,13 @@
 layout: default
 ---
     <header class="headbar text-center">
-        <a href="./index.html" class="logo">coderguy</a><br>
+        <a href="{{site.url}}/index.html" class="logo">coderguy</a><br>
         <span class="symbols">.</span><span class="pageNav">nav</span><span class="symbols"> [</span>
-            <span class="muted">"</span><a class="navItem {% if page.title == 'About' %}active{% endif %}" href="./about.html">about</a><span class="muted">"</span>,
-            <span class="muted">"</span><a class="navItem {% if page.title == 'Projects' %}active{% endif %}" href="./projects.html">projects</a><span class="muted">"</span>,
-            <span class="muted">"</span><a class="navItem {% if page.title == 'Posts' %}active{% endif %}" href="./blog.html">posts</a><span class="muted">"</span>,
-            <span class="muted">"</span><a class="navItem {% if page.title == 'Resume' %}active{% endif %}" href="./resume.html">resume</a><span class="muted">"</span>,
-            <span class="muted">"</span><a class="navItem {% if page.title == 'Contact' %}active{% endif %}" href="./contact.html">contact</a><span class="muted">"</span>
+            <span class="muted">"</span><a class="navItem {% if page.title == 'About' %}active{% endif %}" href="{{site.url}}/about.html">about</a><span class="muted">"</span>,
+            <span class="muted">"</span><a class="navItem {% if page.title == 'Projects' %}active{% endif %}" href="{{site.url}}/projects.html">projects</a><span class="muted">"</span>,
+            <span class="muted">"</span><a class="navItem {% if page.title == 'Posts' %}active{% endif %}" href="{{site.url}}/blog.html">posts</a><span class="muted">"</span>,
+            <span class="muted">"</span><a class="navItem {% if page.title == 'Resume' %}active{% endif %}" href="{{site.url}}/resume.html">resume</a><span class="muted">"</span>,
+            <span class="muted">"</span><a class="navItem {% if page.title == 'Contact' %}active{% endif %}" href="{{site.url}}/contact.html">contact</a><span class="muted">"</span>
             <span class="symbols">]</span>
     </header>
 

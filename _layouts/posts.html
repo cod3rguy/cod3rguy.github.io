@@ -1,0 +1,25 @@
+---
+layout: default
+---
+    <header class="headbar text-center">
+        <a href="{{site.url}}/index.html" class="logo">coderguy</a><br>
+        <span class="symbols">.</span><span class="pageNav">nav</span><span class="symbols"> [</span>
+            <span class="muted">"</span><a class="navItem" href="{{site.url}}/about.html">about</a><span class="muted">"</span>,
+            <span class="muted">"</span><a class="navItem" href="{{site.url}}/projects.html">projects</a><span class="muted">"</span>,
+            <span class="muted">"</span><a class="navItem active" href="{{site.url}}/blog.html">posts</a><span class="muted">"</span>,
+            <span class="muted">"</span><a class="navItem" href="{{site.url}}/resume.html">resume</a><span class="muted">"</span>,
+            <span class="muted">"</span><a class="navItem" href="{{site.url}}/contact.html">contact</a><span class="muted">"</span>
+            <span class="symbols">]</span>
+    </header>
+
+    <main class="container pageContainer">
+        <article class="post">
+            <div class="postHead">
+                <h2 class="postTitle">{{page.title}}</h2>
+                <p class="postDate">{{ page.date | date_to_string }}</p>
+            </div>
+            <div class="postBody">
+                {{content}}
+            </div>
+        </article>
+    </main>
