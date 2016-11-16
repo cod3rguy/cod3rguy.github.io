@@ -145,6 +145,8 @@ html, body, p, h1, h2, pre {
 //Layout: Posts
 
 .post {
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid #666666;
     .postHead {
         .postTitle {
             &:extend(.postsList .postTitle);
@@ -153,6 +155,19 @@ html, body, p, h1, h2, pre {
             .txtSize(0.9);
             color: @fourthColor;
             margin-bottom: 25px;
+        }
+    }
+}
+
+.postFooter {
+    padding: 10px 0;
+    .postNav {
+        a {
+            color: @firstColor;
+            &:hover {
+                color: darken(@firstColor,10%);
+                text-decoration: none;
+            }
         }
     }
 }
