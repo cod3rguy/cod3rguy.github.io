@@ -23,6 +23,10 @@ p, h1, h2, h3, pre, div, span {
     color: @txtColor;
 }
 
+p {
+    margin-bottom: 25px;
+}
+
 html, body {
     font-family: @baseFont;
     color: @txtColor;
@@ -41,7 +45,7 @@ html, body {
 
 .mainFooter {
     margin-top: 30px;
-    padding: 15px 0 5px 0;
+    padding: 15px;
     background: darken(@bgColor,20%);
     a {
         &:extend(.postFooter .postNav a);
@@ -89,7 +93,7 @@ html, body {
 //Layout: Page
 
 .pageContainer {
-    min-height: 1000px;
+    min-height: 900px;
     padding: 120px 20px;
 }
 
