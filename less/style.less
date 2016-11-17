@@ -18,10 +18,15 @@
 }
 
 //Global Styling
-html, body, p, h1, h2, pre {
+p, h1, h2, h3, pre, div, span {
     font-family: @baseFont;
-    background-color: @bgColor;
     color: @txtColor;
+}
+
+html, body {
+    font-family: @baseFont;
+    color: @txtColor;
+    background-color: @bgColor;
 }
 
 .pageHeading {
@@ -31,6 +36,18 @@ html, body, p, h1, h2, pre {
     border-bottom: 1px solid @fourthColor;
     @media (max-width: 360px) {
         .txtSize(1.5);
+    }
+}
+
+.mainFooter {
+    margin-top: 30px;
+    padding: 15px 0 5px 0;
+    background: darken(@bgColor,20%);
+    a {
+        &:extend(.postFooter .postNav a);
+        &:hover {
+            &:extend(.postFooter .postNav a:hover);
+        }
     }
 }
 
@@ -72,6 +89,7 @@ html, body, p, h1, h2, pre {
 //Layout: Page
 
 .pageContainer {
+    min-height: 1000px;
     padding: 120px 20px;
 }
 
