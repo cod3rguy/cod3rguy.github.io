@@ -8,6 +8,8 @@ exclude:
 timezone: America/Chicago
 environment: production
 excerpt_separator: "<read-more>"
+collections:
+    - projects
 defaults:
     -
         scope:

@@ -172,6 +172,38 @@ body {
     }
 }
 
+//Page: Projects
+
+.projectsList {
+    .projectTitle {
+        &:extend(.postsList .postTitle);
+        margin-bottom: 10px;
+    }
+
+    .postDesc {
+        &:extend(.postsList .postExcerpt);
+        margin-bottom: 10px;
+    }
+
+    .postTechs {
+        margin-bottom: 10px;
+        .tech {
+            color: @thirdColor;
+            .txtSize(0.75);
+        }
+    }
+
+    .projectLinks {
+        a {
+            &:extend(.intro pre a);
+            text-decoration: none;
+            &:hover {
+                &:extend(.intro pre a:hover);
+            }
+        }
+    }
+}
+
 //Layout: Posts
 
 .post {
