@@ -27,10 +27,31 @@ p {
     margin-bottom: 25px;
 }
 
-html, body {
+html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
     font-family: @baseFont;
     color: @txtColor;
     background-color: @bgColor;
+}
+
+.mainFooter {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 15px;
+    background: darken(@bgColor,20%);
+    a {
+        &:extend(.postFooter .postNav a);
+        &:hover {
+            &:extend(.postFooter .postNav a:hover);
+        }
+    }
 }
 
 .pageHeading {
@@ -40,18 +61,6 @@ html, body {
     border-bottom: 1px solid @fourthColor;
     @media (max-width: 360px) {
         .txtSize(1.5);
-    }
-}
-
-.mainFooter {
-    margin-top: 30px;
-    padding: 15px;
-    background: darken(@bgColor,20%);
-    a {
-        &:extend(.postFooter .postNav a);
-        &:hover {
-            &:extend(.postFooter .postNav a:hover);
-        }
     }
 }
 
@@ -93,7 +102,6 @@ html, body {
 //Layout: Page
 
 .pageContainer {
-    min-height: 900px;
     padding: 120px 20px;
 }
 
