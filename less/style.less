@@ -167,9 +167,11 @@ body {
             color: @fourthColor;
         }
         .postComments {
-            &:extend(.intro pre a);
-            &:hover {
-                &:extend(.intro pre a:hover);
+            a {
+                &:extend(.intro pre a);
+                &:hover {
+                    &:extend(.intro pre a:hover);
+                }
             }
         }
     }
