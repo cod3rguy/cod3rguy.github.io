@@ -1,6 +1,6 @@
 ---
-title: Weather App
-desc: A web app to show local weather using a weather API.
+title: Calculator
+desc: A simple calculator built using Javascript.
 techs:
     - html
     - css
