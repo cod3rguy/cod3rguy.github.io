@@ -1,0 +1,266 @@
+//Less Imports
+@import "../components/bootstrap/less/bootstrap";
+
+//Global Variables
+@baseFont: "Monaco", monospace;
+@font-size-base: 16px;
+@bgColor: #212121;
+@txtColor: #eeeeee;
+@firstColor: #ffd884;
+@secondColor: #82abff;
+@thirdColor: #82ffb6;
+@fourthColor: #666666;
+@fifthColor: #fcb5de;
+
+//Mixins
+.txtSize(@times) {
+    font-size: @font-size-base * @times;
+}
+
+//Global Styling
+p, h1, h2, h3, pre {
+    font-family: @baseFont;
+    color: @txtColor;
+}
+
+p {
+    margin-bottom: 25px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+    font-family: @baseFont;
+    color: @txtColor;
+    background-color: @bgColor;
+}
+
+.mainFooter {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 15px;
+    background: darken(@bgColor,20%);
+    a {
+        &:extend(.postFooter .postNav a);
+        &:hover {
+            &:extend(.postFooter .postNav a:hover);
+        }
+    }
+}
+
+.pageHeading {
+    .txtSize(2);
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid @fourthColor;
+    @media (max-width: 360px) {
+        .txtSize(1.5);
+    }
+}
+
+.muted {
+   color: @fourthColor;
+}
+
+//Local Styling
+//Styling for Individual pages and layouts
+
+//Page: Home
+
+.intro {
+    pre {
+        margin-top: 20px;
+        background: transparent;
+        border: 0;
+        .txtSize(1.2);
+        .logo {
+            .txtSize(2);
+            color: @thirdColor;
+        }
+        .key {
+            color: @secondColor;
+        }
+        .val {
+            color: @firstColor;
+        }
+        a {
+            text-decoration: underline;
+            color: @fifthColor;
+            &:hover {
+                color: darken(@fifthColor,10%);
+            }
+        }
+    }
+}
+
+//Layout: Page
+
+.pageContainer {
+    padding: 120px 20px;
+}
+
+.headbar {
+    position: fixed;
+    width: 100%;
+    padding: 5px 0 15px 0;
+    background-color: fadeout(darken(@bgColor,5%),10%);
+    border-bottom: 1px solid @thirdColor;
+    .logo {
+        .txtSize(2.5);
+        color: @thirdColor;
+        border-bottom: 1.5px solid @thirdColor;
+        &:hover {
+            color: darken(@thirdColor,10%);
+            border-bottom: 1.5px solid darken(@thirdColor,10%);
+            text-decoration: none;
+        }
+        @media (max-width: 360px) {
+            .txtSize(2);
+        }
+    }
+    .symbols {
+        .txtSize(1.2);
+    }
+    .pageNav {
+        .txtSize(1.2);
+        color: @secondColor;
+    }
+    .navItem {
+        &:extend(.intro pre a);
+        &:hover {
+            &:extend(.intro pre a:hover);
+        }
+        .txtSize(1);
+        &.active {
+            text-decoration: none;
+            color: @firstColor;
+            .txtSize(1.1);
+            &:hover {
+                color: darken(@firstColor,10%); 
+            }
+        }
+    }
+}
+
+//Page: Posts
+
+.postsList {
+    .postTitle {
+    .txtSize(1.5);
+    margin-bottom: 0;
+    color: @firstColor;
+        @media (max-width: 360px) {
+            .txtSize(1.2);
+        }
+    }
+
+    .postDate {
+        .txtSize(0.75);
+        color: @fourthColor;
+        margin-bottom: 5px;
+    }
+
+    .postExcerpt {
+        margin-bottom: 30px;
+        .txtSize(0.9);
+    }
+}
+
+//Page: Projects
+
+.projectsList {
+    .projectTitle {
+        &:extend(.postsList .postTitle);
+        margin-bottom: 10px;
+    }
+
+    .postDesc {
+        &:extend(.postsList .postExcerpt);
+        margin-bottom: 10px;
+    }
+
+    .postTechs {
+        margin-bottom: 10px;
+        .tech {
+            color: @thirdColor;
+            .txtSize(0.75);
+        }
+    }
+
+    .projectLinks {
+        a {
+            &:extend(.intro pre a);
+            text-decoration: none;
+            &:hover {
+                &:extend(.intro pre a:hover);
+            }
+        }
+    }
+}
+
+//Layout: Posts
+
+.post {
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid #666666;
+    .postHead {
+        .postTitle {
+            &:extend(.postsList .postTitle);
+        }
+        .postDate {
+            .txtSize(0.9);
+            color: @fourthColor;
+            margin-bottom: 25px;
+        }
+    }
+    .postBody {
+        a {
+            &:extend(.intro pre a);
+            text-decoration: none;
+            &:hover {
+                &:extend(.intro pre a:hover);
+            }
+        }
+    }
+}
+
+.postFooter {
+    padding: 10px 0;
+    .postNav {
+        a {
+            color: @firstColor;
+            &:hover {
+                color: darken(@firstColor,10%);
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+//Page: Resume
+
+.cvLinks {
+    p {
+        a {
+            color: @firstColor;
+            &:hover {
+                color: darken(@firstColor,10%);
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+//Page: Contact
+
+.contactLinks {
+    a {
+        &:extend(.cvLinks p a);
+    }
+}

@@ -1,0 +1,25 @@
+title: CoderGuy
+exclude: 
+    - README.md
+    - bs-config.js
+    - less
+    - components
+    - bower.json
+timezone: America/Chicago
+environment: production
+excerpt_separator: "<read-more>"
+collections:
+    - projects
+defaults:
+    -
+        scope:
+            path: ""
+            type: "posts"
+        values:
+            layout: "posts"
+    -
+        scope:
+            path: ""
+            type: "pages"
+        values:
+            layout: "pages"

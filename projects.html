@@ -1,0 +1,21 @@
+---
+title: Projects
+---
+
+<h1 class="pageHeading">{{page.title}}</h1>
+
+<div class='projectsList'>
+{% for project in site.projects %}
+    <p class="lead projectTitle">{{project.title}}</p>
+    <p class="postDesc">{{project.desc}}</p>
+    <p class="postTechs">
+    {% for tech in project.techs %}
+        <span class="tech">#{{tech}}</span>
+    {% endfor %}
+    </p>
+    <p class="projectLinks">
+        <a href="{{project.source}}" target="_blank">[ View Source ]</a>
+        <a href="{{project.demo}}" target="_blank">[ View Demo ]</a>
+    </p>
+{% endfor %}
+</div>

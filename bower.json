@@ -1,0 +1,28 @@
+{
+  "name": "coderguy",
+  "homepage": "https://coderguy.tech",
+  "authors": [
+    "Santak Mishra <santakmishra@outlook.com>"
+  ],
+  "description": "Personal website and blog of Santak Mishra",
+  "main": "index.html",
+  "keywords": [
+    "web",
+    "developer",
+    "coder"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
