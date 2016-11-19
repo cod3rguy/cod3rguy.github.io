@@ -6,7 +6,7 @@ title: Posts
 
 <div class="postsList">
 {% for post in site.posts %}
-    <a href="{{post.url}}" class="postTitle">{{post.title}}</a>
+    <a href="{{site.url}}{{post.url}}#disqus_thread" class="postTitle">{{post.title}}</a>
     <p class="postDate">{{ post.date | date_to_string }}</p>
     <p class="hidden-xs postExcerpt">{{post.excerpt | remove: '<p>' | remove: '</p>'}}</p>
 {% endfor %}
