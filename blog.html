@@ -9,7 +9,7 @@ title: Posts
     <a href="{{site.url}}{{post.url}}" class="postTitle">{{post.title}}</a>
     <p class="postDateComments">
         <span class="postDate">{{ post.date | date_to_string }}</span>
-        <span class="postComments"><a href="{{site.url}}{{post.url}}#disqus_thread" data-disqus-identifier="{{post.id}}">0 Comments</a></span>
+        <span class="postComments"><a href="{{site.url}}{{post.url}}#disqus_thread"></a></span>
     </p>
     <p class="hidden-xs postExcerpt">{{post.excerpt | remove: '<p>' | remove: '</p>'}}</p>
 {% endfor %}
