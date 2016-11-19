@@ -160,10 +160,18 @@ body {
         }
     }
 
-    .postDate {
+    .postDateComments {
         .txtSize(0.75);
-        color: @fourthColor;
         margin-bottom: 5px;
+        .postDate {
+            color: @fourthColor;
+        }
+        .postComments {
+            &:extend(.intro pre a);
+            &:hover {
+                &:extend(.intro pre a:hover);
+            }
+        }
     }
 
     .postExcerpt {
@@ -180,12 +188,12 @@ body {
         margin-bottom: 10px;
     }
 
-    .postDesc {
+    .projectDesc {
         &:extend(.postsList .postExcerpt);
         margin-bottom: 10px;
     }
 
-    .postTechs {
+    .projectTechs {
         margin-bottom: 10px;
         .tech {
             color: @thirdColor;
