@@ -7,8 +7,8 @@ title: Projects
 <div class='projectsList'>
 {% for project in site.projects %}
     <p class="lead projectTitle">{{project.title}}</p>
-    <p class="postDesc">{{project.desc}}</p>
-    <p class="postTechs">
+    <p class="projectDesc">{{project.desc}}</p>
+    <p class="projectTechs">
     {% for tech in project.techs %}
         <span class="tech">#{{tech}}</span>
     {% endfor %}
