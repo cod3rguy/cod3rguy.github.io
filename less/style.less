@@ -219,6 +219,15 @@ body {
             margin-bottom: 25px;
         }
     }
+    .postBody {
+        a {
+            &:extend(.intro pre a);
+            text-decoration: none;
+            &:hover {
+                &:extend(.intro pre a:hover);
+            }
+        }
+    }
 }
 
 .postFooter {
