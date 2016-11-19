@@ -169,6 +169,13 @@ body {
     .postExcerpt {
         margin-bottom: 30px;
         .txtSize(0.9);
+        a {
+            &:extend(.intro pre a);
+            text-decoration: none;
+            &:hover {
+                &:extend(.intro pre a:hover);
+            }
+        }
     }
 }
 
