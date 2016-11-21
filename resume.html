@@ -6,8 +6,12 @@ title: Resume
 
 <div class="cvLinks">
     <p>
-        <a href="{{site.url}}/assets/docs/resume.pdf" target="_blank">Download CV in PDF format</a> <br>
-        <small class="muted">Last updated on 20 Nov 2016</small>
+        {% for file in site.static_files %}
+        {% if file.basename == "resume" %}
+        <a href="{{site.url}}{{file.path}}" target="_blank">Download CV in PDF format</a> <br>
+        <small class="muted">Last updated on {{file.modified_time | date: "%D" }}</small>
+        {% endif %}
+        {% endfor %}
     </p>
     <p>
         <a href="http://stackoverflow.com/story/santakmishra" target="_blank">
