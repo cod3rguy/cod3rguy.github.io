@@ -1,16 +1,11 @@
 //Less Imports
+
+//Foreign Dependencies
 @import "../components/bootstrap/less/bootstrap";
 
-//Global Variables
-@baseFont: "Monaco", monospace;
-@font-size-base: 16px;
-@bgColor: #212121;
-@txtColor: #eeeeee;
-@firstColor: #ffd884;
-@secondColor: #82abff;
-@thirdColor: #82ffb6;
-@fourthColor: #666666;
-@fifthColor: #fcb5de;
+//Native Dependencies
+@import  "./includes/variables";
+@import "./includes/highlight";
 
 //Mixins
 .txtSize(@times) {
@@ -18,7 +13,7 @@
 }
 
 //Global Styling
-p, h1, h2, h3, pre {
+p, h1, h2, h3 {
     font-family: @baseFont;
     color: @txtColor;
 }
@@ -75,6 +70,7 @@ body {
 
 .intro {
     pre {
+        color: @txtColor;
         margin-top: 20px;
         background: transparent;
         border: 0;
@@ -271,4 +267,15 @@ body {
     a {
         &:extend(.cvLinks p a);
     }
+}
+
+//Syntax highlighting
+
+//Inline
+code.highlighter-rouge {
+    padding: 2px;
+    white-space: nowrap;
+    border-radius: 0;
+    background-color: darken(@fourthColor,20%);
+    color: lighten(@fourthColor,30%);
 }
