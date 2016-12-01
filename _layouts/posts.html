@@ -21,6 +21,18 @@ layout: default
             <div class="postBody">
                 {{content}}
             </div>
+            {% if page.share == true and jekyll.environment == "production" %}
+            <div class='row postShare'>
+                <div class='col-md-12'>
+                    <span class='st_facebook_large' displayText='Facebook'></span>
+                    <span class='st_twitter_large' displayText='Tweet'></span>
+                    <span class='st_linkedin_large' displayText='LinkedIn'></span>
+                    <span class='st_googleplus_large' displayText='Google +'></span>
+                    <span class='st_email_large' displayText='Email'></span>
+                    <span class='st_print_large' displayText='Print'></span>
+                </div>
+            </div>
+            {% endif %}
         </article>
         <footer class="postFooter">
             <div class='row postNav'>
