@@ -18,6 +18,7 @@ defaults:
         values:
             layout: "posts"
             comments: true
+            share: true
     -
         scope:
             path: ""
