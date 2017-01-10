@@ -9,5 +9,5 @@ techs:
     - jquery
     - materialize
 source: https://github.com/cod3rguy/weather-app
-demo: http://santak.xyz/phplab/weather-app/
+demo: http://lab.coderguy.tech/weather-app/
 ---

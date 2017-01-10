@@ -7,6 +7,7 @@ techs:
     - less
     - javascript
     - jquery
+    - bootstrap
 source: https://github.com/cod3rguy/simon-game
-demo: http://santak.xyz/phplab/simon-game/
+demo: http://lab.coderguy.tech/simon-game/
 ---

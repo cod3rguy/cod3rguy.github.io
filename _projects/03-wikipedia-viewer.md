@@ -9,5 +9,5 @@ techs:
     - jquery
     - materialize
 source: https://github.com/cod3rguy/wikipedia-viewer
-demo: http://santak.xyz/phplab/wikipedia-viewer/
+demo: http://lab.coderguy.tech/wikipedia-viewer/
 ---
