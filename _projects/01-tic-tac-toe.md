@@ -7,6 +7,7 @@ techs:
     - less
     - javascript
     - jquery
+    - bootstrap
 source: https://github.com/cod3rguy/tic-tac-toe
-demo: http://santak.xyz/phplab/tic-tac-toe/
+demo: http://lab.coderguy.tech/tic-tac-toe/
 ---

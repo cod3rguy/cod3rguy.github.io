@@ -9,5 +9,5 @@ techs:
     - jquery
     - materialize
 source: https://github.com/cod3rguy/calculator
-demo: http://santak.xyz/phplab/calculator/
+demo: http://lab.coderguy.tech/calculator/
 ---
