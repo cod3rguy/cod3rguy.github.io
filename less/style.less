@@ -149,10 +149,10 @@ body {
 .postsList {
     .postTitle {
     .txtSize(1.5);
-    margin-bottom: 0;
+    margin-bottom: 10px;
     color: @firstColor;
         @media (max-width: 360px) {
-            .txtSize(1.2);
+            .txtSize(1.3);
         }
     }
 
@@ -215,6 +215,7 @@ body {
     .postHead {
         .postTitle {
             &:extend(.postsList .postTitle);
+            line-height: @font-size-base * 1.75;
         }
         .postDate {
             .txtSize(0.9);
@@ -224,6 +225,7 @@ body {
     }
     .postBody {
         a {
+            
             &:extend(.intro pre a);
             text-decoration: none;
             &:hover {
@@ -234,6 +236,23 @@ body {
         strong {
             color: @secondColor;
         }
+
+        h3 {
+            .txtSize(1.5);
+            color: @secondColor;
+            @media (max-width: 360px) {
+                .txtSize(1.3);
+            }
+        }
+
+        h4 {
+            .txtSize(1.3);
+            color: @secondColor;
+            @media (max-width: 360px) {
+                .txtSize(1.2);
+            }
+        }
+
     }
 }
 
