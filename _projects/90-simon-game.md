@@ -8,6 +8,7 @@ techs:
     - javascript
     - jquery
     - bootstrap
+    - bower
 source: https://github.com/cod3rguy/simon-game
 demo: http://lab.coderguy.tech/simon-game/
 ---
