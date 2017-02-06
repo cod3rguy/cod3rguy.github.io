@@ -12,6 +12,7 @@ techs:
     - browserify
     - babel
     - npm
+    - marked
 source: https://github.com/cod3rguy/markdown-previewer/
 demo: http://lab.coderguy.tech/markdown-previewer/
 ---
