@@ -8,6 +8,7 @@ techs:
     - javascript
     - jquery
     - materialize
+    - wikipedia-api
 source: https://github.com/cod3rguy/wikipedia-viewer
 demo: http://lab.coderguy.tech/wikipedia-viewer/
 ---
