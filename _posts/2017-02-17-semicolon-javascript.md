@@ -147,7 +147,7 @@ console.log(fn(5));
 
 Apart from the above tips, I recommend learning how ASI works in order to better take advantage of it. We already know the rules of ASI since we do it's job ourselves (by inserting semicolons where they should be inserted). We have learned to end expressions with semicolons but not loops and function definitions. We have unnecessarily overloaded our brains with rules which can be taken care of by automatically. Instead of taking care of semicolons throughout the code, we can just take care of a couple special cases and leave the rest to ASI. This not only makes the code less prone to bugs from missing semicolons, but also much cleaner and more readable.
 
-There are projects out there using both styles of coding. If you're an open source contributor, chances are you've already encountered both styles various open source projects. Whether you choose to sway one way or the other, it doesn't hurt to learn and get familiar with both styles; it only makes it easier to adapt to different projects, teams and code bases.
+There are projects out there using both styles of coding. If you're an open source contributor, chances are you've already encountered both styles in various open source projects. Whether you choose to sway one way or the other, it doesn't hurt to learn and get familiar with both styles; it only makes it easier to adapt to different projects, teams and code bases.
 
 [1]: http://www.ecma-international.org/ecma-262/6.0/index.html#sec-automatic-semicolon-insertion
 [2]: http://www.bradoncode.com/blog/2015/08/26/javascript-semi-colon-insertion/
