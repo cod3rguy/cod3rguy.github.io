@@ -95,8 +95,8 @@ console.log(b)
 
 // Correct syntax after ASI
 let a = 5;
-let b = a;
-[b] = [10]; // this basically becomes "let b = a[b] = [10];"
+let b = a; // the previous statement ends properly
+[b] = [10];
 console.log(b);
 
 // Intended Output
