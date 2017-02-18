@@ -67,6 +67,43 @@ console.log(sum);
 
 ```
 
+- If your statement begins with a bracket or parentheses, prepend it with a semicolon.
+
+```javascript
+// Example
+
+// Incorrect syntax before ASI
+let a = 5
+let b = a
+[b] = [10]
+console.log(b)
+
+// Incorrect syntax after ASI
+let a = 5;
+let b = a
+[b] = [10]; // this basically becomes "let b = a[b] = [10];"
+console.log(b);
+
+// Unintended Output
+Error: 'b' is not defined
+
+// Correct syntax before ASI
+let a = 5
+let b = a
+;[b] = [10]
+console.log(b)
+
+// Correct syntax after ASI
+let a = 5;
+let b = a;
+[b] = [10]; // this basically becomes "let b = a[b] = [10];"
+console.log(b);
+
+// Intended Output
+10
+
+```
+
 - Try not to make the task of ASI difficult by breaking statements with new-lines where they shouldn't be broken. This may make it tough to pin-point syntax errors which would instead be accommodated by the ASI by turning them into valid statements (but breaking the code).
 
 ```javascript
