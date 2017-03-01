@@ -9,6 +9,6 @@ techs:
     - jquery
     - bootstrap
     - bower
-source: https://github.com/cod3rguy/tic-tac-toe
+source: https://github.com/cod3rguy/tic-tac-toe/
 demo: http://lab.coderguy.tech/tic-tac-toe/
 ---
