@@ -12,6 +12,6 @@ techs:
     - browserify
     - babel
     - npm
-source: https://github.com/cod3rguy/flashcards
+source: https://github.com/cod3rguy/flashcards/
 demo: http://lab.coderguy.tech/flashcards/
 ---
