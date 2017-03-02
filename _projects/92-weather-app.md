@@ -9,6 +9,6 @@ techs:
     - jquery
     - materialize
     - openweather-api
-source: https://github.com/cod3rguy/weather-app
+source: https://github.com/cod3rguy/weather-app/
 demo: http://lab.coderguy.tech/weather-app/
 ---
