@@ -8,6 +8,6 @@ techs:
     - javascript
     - jquery
     - materialize
-source: https://github.com/cod3rguy/calculator
+source: https://github.com/cod3rguy/calculator/
 demo: http://lab.coderguy.tech/calculator/
 ---
