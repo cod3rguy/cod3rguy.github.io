@@ -8,6 +8,6 @@ techs:
     - javascript
     - jquery
     - bootstrap
-source: https://github.com/cod3rguy/random-quote-machine
+source: https://github.com/cod3rguy/random-quote-machine/
 demo: http://lab.coderguy.tech/random-quote-machine/
 ---
