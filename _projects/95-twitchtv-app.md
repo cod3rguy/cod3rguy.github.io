@@ -9,6 +9,6 @@ techs:
     - jquery
     - materialize
     - twitch-tv-api
-source: https://github.com/cod3rguy/twitchtv-app
+source: https://github.com/cod3rguy/twitchtv-app/
 demo: http://lab.coderguy.tech/twitchtv-app/
 ---
