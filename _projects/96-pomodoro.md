@@ -8,6 +8,6 @@ techs:
     - javascript
     - jquery
     - materialize
-source: https://github.com/cod3rguy/pomodoro
+source: https://github.com/cod3rguy/pomodoro/
 demo: http://lab.coderguy.tech/pomodoro/
 ---
