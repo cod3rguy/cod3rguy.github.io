@@ -7,6 +7,6 @@ techs:
     - javascript
     - jquery
     - bootstrap
-source: https://github.com/cod3rguy/tribute-page
+source: https://github.com/cod3rguy/tribute-page/
 demo: http://lab.coderguy.tech/tribute-page
 ---
